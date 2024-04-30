@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="">
+    <p>Input something in the input box:</p>
+    <p>Name : <input type="text" ng-model="name" placeholder="Enter name here">
+        <input type="text" ng-model="operator" placeholder="Enter operator">
+        <input type="text" ng-model="name1" placeholder="Enter name here">
+    </p>
+    <h1> {{name}} {{operator}} {{name1}}</h1>
+    <p id="ans"> </p>
+    <button ng-click="calculate()"> = </button>
+
+    <script>
+        function sum(a, b, operator) {
+            switch (operator) {
+                case '+':
+                    return a + b;
+                case '-':
+                    return a - b;
+                default:
+                    return NaN;
+            }
+        }
+
+        function isNumeric(value) {
+            return !isNaN(parseFloat(value)) && isFinite(value);
+        }
+
+        function isValidInput(a, b, operator) {
+            return isNumeric(a) && isNumeric(b) && (operator === '+' || operator === '-');
+        }
+
+        function calculate() {
+            var a = $scope.name;
+            var b = $scope.name1;
+            var operator = $scope.operator;
+
+            if (isValidInput(a, b, operator)) {
+                var result = sum(parseFloat(a), parseFloat(b), operator);
+                document.getElementById("ans").innerHTML = result;
+            } else {
+                document.getElementById("ans").innerHTML = "Invalid input";
+            }
+        }
+    </script>
+</div>
+
+</body>
+</html>

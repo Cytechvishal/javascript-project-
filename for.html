@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <script src="for.js">
+
+    </script> -->
+</head>
+<body>
+<!--   
+
+   Enter any number up to which you want to print natural number series : <input id="numberInput" type="number">
+
+   <button onclick="nat()">Print Series</button>
+
+<p id="ans">
+
+</p>
+<script>
+    function nat() {
+        n = parseInt(document.getElementById('numberInput').value);
+        answer = [];
+        for (i = 1; i <= n; i++) {
+            answer.push(i);
+        }
+        document.getElementById('ans').innerHTML = answer;
+    }
+</script> -->
+
+
+<p>
+    Enter any number :
+</p>
+<input id="num" type="number">
+
+<button onclick="table()">
+    Print Table
+</button>
+
+<script>
+
+
+    function table(){
+        n =  Number(document.getElementById('num').value) 
+
+        for(i=1 ; i<11 ; i=i+1 ){
+            console.log(n*i)
+        }
+
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<input type="number" placeholder="Enter any number" id="number">    
+<button onclick="cot()">Count</button>
+<p id="answer">
+</p>
+<script>
+function cot(){
+    n=Number(document.getElementById('number').value)
+    i=0
+    while(n>0){
+        rem=n%10
+        i=i+1
+        n=parseInt(n/10)
+    }
+    document.getElementById('answer').innerHTML = i
+}
+</script>
+</body>
+</html>

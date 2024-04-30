@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <input type="number" placeholder="Enter any number" id="number">
+    <button onclick="sqr()">Print Series</button>
+    <p id="answer"></p>
+    <script>
+        function sqr(){
+            n=Number(document.getElementById('number').value)
+            i=1
+            myArray=[]
+            while(i<=n){
+                myArray.push(i*i)
+                i++
+            }
+            document.getElementById('answer').innerHTML=myArray
+        }
+    </script>
+</body>
+</html>

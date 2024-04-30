@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    
+    <input id="number" type="number">
+
+    <button onclick="per()">Check Perfact Or Not</button>
+
+<p id="answer">
+
+</p>
+
+<script>
+    function per(){
+        n = Number(document.getElementById('number').value)
+        temp = n
+        per = 0
+        for(i=1;i<n;i++){
+            if(n%i==0){
+                per = per+i
+            }
+
+        }
+        if(temp==per){
+            document.getElementById("answer").innerHTML = temp  + " is Perfact"
+        }
+        else{
+            document.getElementById("answer").innerHTML = temp  +" is Not Perfact"
+        }
+    }
+</script>
+
+
+</body>
+</html>

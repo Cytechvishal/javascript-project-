@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+
+    <div ng-app="">
+
+        <p>Input something in the input box:</p>
+        <p>Name : <input type="text" id="a" ng-model="name" placeholder="Enter name here">
+            <input type="text" id="OP" ng-model="OP" placeholder="Enter name OPERATOR">
+
+            <input type="text" id="b" ng-model="name1" placeholder="Enter name here">
+        </p>
+        <h1> {{name}} {{OP}} {{name1}}</h1>
+        <p id="ans1"> </p>
+        <button onclick="ans()"> = </button>
+
+        <script>
+
+            function ans() {
+
+
+                op = document.getElementById('OP').value
+                a = parseInt(document.getElementById("a").value)
+                b = parseInt(document.getElementById("b").value)
+
+                switch (op) {
+                    case '+':
+                        c = a + b
+                        break;
+                    case '-':
+                        c = a - b
+                        break;
+                    case '*':
+                        c = a * b
+                        break;
+                    case '/':
+                        c = a / b
+                        break;
+                    default:
+                    // code block
+                }
+
+                document.getElementById('ans1').innerHTML = c
+
+
+            }
+
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>

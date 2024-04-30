@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1000;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide">
+          <img  height="500px" width="100%" src="images/cafe.webp" alt="Image 1">
+        </div>
+        <div class="slide">
+          <img height="500px" width="100%" src="images/com.webp" alt="Image 2">
+        </div>
+        <div class="slide">
+          <img height="500px" width="100%" src="images/hamburger.jpg" alt="Image 3">
+        </div>
+      </div>
+      <div class="prev" onclick="prevSlide()">&#10094;</div>
+      <div class="next" onclick="nextSlide()">&#10095;</div>
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlides() {
+    slides.forEach(slide => slide.style.display = 'none');
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  function prevSlide() {
+    slideIndex--;
+    if (slideIndex < 1) slideIndex = slides.length;
+    showSlides();
+  }
+
+  function nextSlide() {
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1;
+    showSlides();
+  }
+
+  showSlides();
+</script>
+
+</body>
+</html>

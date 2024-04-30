@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+</head>
+<body>
+    
+    Enter any number to check that number is Armstrong or not?
+    <input id="number" value=""   type="number" placeholder="Enter any number to check that number is Armstrong or not?">
+
+    <button onclick="armstrong()">Check It</button>
+
+    <p id="answer">
+
+    </p>
+
+    <script>
+
+        function armstrong(){
+            a = document.getElementById('number').value
+            len = a.length
+            n = Number(a)
+            temp = n
+
+            arm = 0
+
+            while(n>0){
+                rem = n%10
+                arm = arm+(rem**len)
+                n = parseInt(n/10)
+
+            }
+
+            if(temp==arm){
+                document.getElementById('answer').innerHTML = "This is Armstrong Number"
+            }else{
+                document.getElementById('answer').innerHTML = "This is not Armstrong Number"
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>

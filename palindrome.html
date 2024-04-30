@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+</head>
+<body>
+    
+    Enter any number to check that number is palindrome or not?
+    <input id="number" value=""   type="number" placeholder="Enter any number to check that number is palindrome or not?">
+
+    <button onclick="palindrome()">Check It</button>
+
+    <p id="answer">
+
+    </p>
+
+    <script>
+
+        function palindrome(){
+            a = document.getElementById('number').value
+           
+            n = Number(a)
+            temp = n
+
+            pali = 0
+
+            do{
+                rem = n%10
+                pali = pali*10 +rem
+                n = parseInt(n/10)
+
+            }while(n>0)
+
+            if(temp==pali){
+                document.getElementById('answer').innerHTML = "This is palindrome Number"
+            }else{
+                document.getElementById('answer').innerHTML = "This is not palindrome Number"
+            }
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>

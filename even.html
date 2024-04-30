@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    
+
+    <input id="natural" placeholder="Enter any number" type="number" >
+
+    <button onclick="nat()">Print Natural Number</button>
+
+    <p id="answer">
+
+    </p>
+
+    <script>
+
+        function nat(){
+
+            n = Number(document.getElementById('natural').value)
+
+            a = new Array(Infinity);
+
+            for(i=1; i<=n; i++){
+                if(i%2 == 0){
+                    a.push(i)
+                }
+            }
+
+           console.log(a) 
+
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

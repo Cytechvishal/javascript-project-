@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="">
+<p>
+    <input type="number" id="a" ng-model="num1" placeholder="enter a value">
+    <input type="text" id="optr" ng-model="op" placeholder="enter a operator">
+    <input type="number" id="b" ng-model="num2" placeholder="enter a value">
+
+</p>
+<h1>{{num1}} {{op}} {{num2}}</h1>
+<p id="total"></p>
+<button onclick="enter()">=</button>
+
+    </div>
+    <script>
+        function enter(){
+            OP = document.getElementById('optr').value
+            a = parseInt(document.getElementById('a').value)
+            b = parseInt(document.getElementById('b').value)
+            
+            switch (OP) {
+                    case '+':
+                        c = a + b
+                        break;
+                    case '-':
+                        c = a - b
+                        break;
+                    case '*':
+                        c = a * b
+                        break;
+                    case '/':
+                        c = a / b
+                        break;
+                    default:
+                    // code block
+                }
+            document.getElementById('total').innerHTML = c;
+        }
+        
+    </script>
+</body>
+</html>

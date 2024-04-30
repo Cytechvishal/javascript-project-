@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .z1>li {
+            margin: auto;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="z1" style="display: flex;">
+            <li id="a1">
+
+            </li>
+            <li id="a2">
+
+            </li>
+            <li id="a3">
+
+            </li>
+            <li id="a4">
+
+            </li>
+
+        </ul>
+    </nav>
+
+    <script>
+
+
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue",
+            fullName: function () {
+                return this.firstName + this.lastName
+            }
+        };
+
+        // document.write(person.firstName +  " " +person.lastName)
+
+        document.getElementById('a1').innerHTML = (person.fullName())
+        document.getElementById('a2').innerHTML = (person.eyeColor)
+        document.getElementById('a3').innerHTML = (person.age)
+        document.getElementById('a4').innerHTML = (person.firstName)
+
+
+    </script>
+</body>
+
+</html>

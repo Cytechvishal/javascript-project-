@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="add()">
+    <input type="text" id="up" onkeydown="upp()">
+   <p id="ans"></p>
+    <script>
+        function upp(){
+
+            a = document.getElementById('up').value
+            
+            document.getElementById('up').value = a.toUpperCase()
+
+
+        }
+        function add(){
+           alert("Welcome")
+        }
+    </script>
+</body>
+</html>
